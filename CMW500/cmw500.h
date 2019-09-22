@@ -3,6 +3,7 @@
 
 #include "visa.h"
 #include <QObject>
+#include "global.h"
 
 class CMW500 : public QObject
 {
@@ -17,13 +18,17 @@ signals:
 
 public slots:
 
-public:
+public:    
     QString serialNumber = "";
     QString config = "";
     bool errorFlag = true;//true表示有错误发生，false表示没有错误发生，连接GPIB的时候获取
     bool selfChecking = true;//true表示仪器处于自检状态，false表示不处于自检状态，连接GPIB的时候获取
     QString GPIB_ADDRESS;
     QString LAN_ADDRESS;
+    ViSession SESSION;
+
+public:
+    bool getSN();//获得仪器的SN
 };
 
 #endif // CMW500_H

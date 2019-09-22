@@ -199,6 +199,12 @@ void PowerMeasure::iniAllTestItem()
     iniTableViewData(frequencyPoint_RX, RF4COM_RX, "RF4COM_RX_TEST");
 }
 
+void PowerMeasure::onPowerMeasureSignal()
+{
+    //选项有测PowerMeasure，所以开始PowerMeasure的测量
+
+}
+
 
 
 

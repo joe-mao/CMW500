@@ -42,16 +42,8 @@ public:
     void iniTableViewData(vector<QString> & frequency,  map<QString, vector<QString>> & test, QString testItem);
     void iniAllTestItem();
 
-
-
-    bool instrumentSet(ViSession device, QString command);
-    bool nextStepMessage(QString windowTitle, QString messageText);
-    bool TX_TEST(vector<QString> & frequencyPoint, vector<QString> & txPowerPoint, map<QString, map<QString, QString>> & testResult, QString connectorName, QString converterName);
-    bool RX_TEST(vector<QString> & frequencyPoint, vector<QString> & txPowerPoint, map<QString, map<QString, QString>> & testResult, QString connectorName, QString converterName);
-    bool writeToCSV(map<QString, map<QString, QString>> & testResult, QString csvName, QString testItemName, vector<QString> & Power, vector<QString> & frequency);
-
-
 private slots:
+    void onPowerMeasureSignal();
 
 private:
     Ui::PowerMeasure *ui;

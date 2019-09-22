@@ -6,6 +6,8 @@
 #include "signalanalyzer.h"
 #include "signalgenerator.h"
 #include "powermeter.h"
+#include <vector>
+using namespace std;
 
 namespace Ui {
 class Information;
@@ -14,10 +16,13 @@ class Information;
 class Information : public QWidget
 {
     Q_OBJECT
-
 public:
     explicit Information(QWidget *parent = nullptr);
     ~Information();
+
+signals:
+    void powerMeasureSignal();
+
 private:
     void iniGPINInformation();
 
@@ -26,6 +31,8 @@ private slots:
 
 private:
     Ui::Information *ui;
+    vector<QString> testItem;
+
 };
 
 #endif // INFORMATION_H

@@ -46,6 +46,7 @@ void Information::iniGPINInformation()
     PowerMeter::getInstance()->GPIB_ADDRESS = this->ui->le_PowerMeterAddress->text();
 }
 
+
 void Information::on_btn_start_clicked()
 {
     //1. 连接GPIB，连接成功下一步，连接失败State显示失败返回
@@ -53,17 +54,22 @@ void Information::on_btn_start_clicked()
 
     //2. 判断CheckBox选择了哪几项
     foreach(QObject * object, this->ui->groupBoxTestItem->children()){
-
         QCheckBox * checkBox_eg = qobject_cast<QCheckBox *>(object);
         if((checkBox_eg != nullptr) && (checkBox_eg->checkState() == Qt::Checked)){
             //获取选择项
-            qDebug()<<checkBox_eg->text();
+            testItem.push_back(checkBox_eg->text());
         }
 
+    }
+    //3. 获取DUTSN
 
 
+    //4.测试选中项
+    foreach(QString qstring, testItem){
+        if(qstring == "PowerMeasure"){
+            emit powerMeasureSignal();
+        }
     }
 
-    //3. 测试选中的项，测试之前先获取SN
-    //4. 生成的测试结果以SN保存
+    //5. 生成的测试结果以SN命名保存
 }

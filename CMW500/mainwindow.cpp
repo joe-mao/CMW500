@@ -15,6 +15,7 @@ MainWindow::MainWindow(QWidget *parent) :
     //this->ui->tabWidget->tabsClosable();//Page有关闭按钮，可被关闭
     this->setCentralWidget(this->ui->tabWidget);
     this->setWindowState(Qt::WindowMaximized);
+
 }
 
 MainWindow::~MainWindow()
@@ -55,6 +56,8 @@ void MainWindow::on_actionTest_triggered()
         this->ui->tabWidget->addTab(harmonicTest, "HarmonicTest");
 
         this->ui->tabWidget->addTab(phaseNoise, "PhaseNoise");
+
+        connect(information, SIGNAL(powerMeasureSignal()), powerMeasure, SLOT(onPowerMeasureSignal()));
 
         this->ui->tabWidget->setVisible(true);
 

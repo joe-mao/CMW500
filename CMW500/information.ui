@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1062</width>
+    <width>821</width>
     <height>496</height>
    </rect>
   </property>
@@ -18,9 +18,13 @@
     <rect>
      <x>10</x>
      <y>10</y>
-     <width>521</width>
-     <height>241</height>
+     <width>309</width>
+     <height>202</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-color: rgb(0, 0, 0);
+background-color: rgb(170, 255, 255);</string>
    </property>
    <property name="title">
     <string>Address Information</string>
@@ -28,10 +32,10 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>30</y>
-      <width>151</width>
-      <height>31</height>
+      <x>10</x>
+      <y>22</y>
+      <width>90</width>
+      <height>16</height>
      </rect>
     </property>
     <property name="text">
@@ -44,10 +48,10 @@
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>80</y>
-      <width>151</width>
-      <height>31</height>
+      <x>10</x>
+      <y>66</y>
+      <width>150</width>
+      <height>16</height>
      </rect>
     </property>
     <property name="text">
@@ -60,10 +64,10 @@
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>140</y>
-      <width>151</width>
-      <height>31</height>
+      <x>10</x>
+      <y>110</y>
+      <width>144</width>
+      <height>16</height>
      </rect>
     </property>
     <property name="text">
@@ -76,10 +80,10 @@
    <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>200</y>
-      <width>151</width>
-      <height>31</height>
+      <x>10</x>
+      <y>154</y>
+      <width>120</width>
+      <height>16</height>
      </rect>
     </property>
     <property name="text">
@@ -89,85 +93,212 @@
      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit">
+   <widget class="QLineEdit" name="le_CMW500Address">
     <property name="geometry">
      <rect>
-      <x>190</x>
-      <y>30</y>
-      <width>231</width>
+      <x>166</x>
+      <y>22</y>
+      <width>133</width>
       <height>20</height>
      </rect>
     </property>
+    <property name="text">
+     <string>GPIB0::20::INSTR</string>
+    </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_2">
+   <widget class="QLineEdit" name="le_SignalGeneratorAddress">
     <property name="geometry">
      <rect>
-      <x>190</x>
-      <y>90</y>
-      <width>231</width>
+      <x>166</x>
+      <y>66</y>
+      <width>133</width>
       <height>20</height>
      </rect>
     </property>
+    <property name="text">
+     <string>GPIB0::20::INSTR</string>
+    </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_3">
+   <widget class="QLineEdit" name="le_SignalAnalyzerAddress">
     <property name="geometry">
      <rect>
-      <x>190</x>
-      <y>140</y>
-      <width>231</width>
+      <x>166</x>
+      <y>110</y>
+      <width>133</width>
       <height>20</height>
      </rect>
     </property>
+    <property name="text">
+     <string>GPIB0::20::INSTR</string>
+    </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_4">
+   <widget class="QLineEdit" name="le_PowerMeterAddress">
     <property name="geometry">
      <rect>
-      <x>190</x>
-      <y>200</y>
-      <width>231</width>
+      <x>166</x>
+      <y>154</y>
+      <width>133</width>
       <height>20</height>
      </rect>
     </property>
+    <property name="text">
+     <string>GPIB0::20::INSTR</string>
+    </property>
    </widget>
+   <widget class="QLabel" name="lb_CMW500State">
+    <property name="geometry">
+     <rect>
+      <x>166</x>
+      <y>48</y>
+      <width>133</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lb_SignalGeneratorState">
+    <property name="geometry">
+     <rect>
+      <x>166</x>
+      <y>92</y>
+      <width>133</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lb_SignalAnalyzerState">
+    <property name="geometry">
+     <rect>
+      <x>166</x>
+      <y>136</y>
+      <width>133</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lb_PowerMeter">
+    <property name="geometry">
+     <rect>
+      <x>166</x>
+      <y>180</y>
+      <width>133</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBoxTestItem">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>30</y>
+     <width>115</width>
+     <height>92</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 127);</string>
+   </property>
+   <property name="title">
+    <string>Test Item</string>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <widget class="QCheckBox" name="checkBox">
+      <property name="text">
+       <string>PowerMeasure</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="checkBox_2">
+      <property name="text">
+       <string>HarmonicTest</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="checkBox_3">
+      <property name="text">
+       <string>PhaseNoise</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_4">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>270</y>
+     <width>95</width>
+     <height>84</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Function</string>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_3">
+    <item>
+     <widget class="QPushButton" name="btn_start">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>Start</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btn_stop">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>Stop</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
   </widget>
   <widget class="QGroupBox" name="groupBox_2">
    <property name="geometry">
     <rect>
-     <x>560</x>
-     <y>10</y>
-     <width>231</width>
-     <height>241</height>
+     <x>20</x>
+     <y>260</y>
+     <width>291</width>
+     <height>111</height>
     </rect>
    </property>
    <property name="title">
-    <string>PowerMeasure</string>
+    <string>State</string>
    </property>
-   <widget class="QRadioButton" name="radioButton">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>40</y>
-      <width>131</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Comfortable Test</string>
-    </property>
-   </widget>
-   <widget class="QRadioButton" name="radioButton_2">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>80</y>
-      <width>111</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Strictly Test</string>
-    </property>
-   </widget>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLabel" name="label_5">
+      <property name="text">
+       <string>PASS</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
   </widget>
  </widget>
  <resources/>

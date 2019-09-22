@@ -6,8 +6,6 @@ HarmonicTest::HarmonicTest(QWidget *parent) :
     ui(new Ui::HarmonicTest)
 {
     ui->setupUi(this);
-
-
 }
 
 HarmonicTest::~HarmonicTest()

@@ -30,14 +30,24 @@ SOURCES += \
     powermeasure.cpp \
     harmonictest.cpp \
     phasenoise.cpp \
-    information.cpp
+    information.cpp \
+    cmw500.cpp \
+    powermeter.cpp \
+    signalgenerator.cpp \
+    signalanalyzer.cpp \
+    global.cpp
 
 HEADERS += \
         mainwindow.h \
     powermeasure.h \
     harmonictest.h \
     phasenoise.h \
-    information.h
+    information.h \
+    cmw500.h \
+    powermeter.h \
+    signalgenerator.h \
+    signalanalyzer.h \
+    global.h
 
 FORMS += \
         mainwindow.ui \
@@ -53,3 +63,11 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 RESOURCES += \
     res.qrc
+
+win32: LIBS += -L$$PWD/include/ -lvisa32
+
+INCLUDEPATH += $$PWD/include
+DEPENDPATH += $$PWD/include
+
+win32:!win32-g++: PRE_TARGETDEPS += $$PWD/include/visa32.lib
+else:win32-g++: PRE_TARGETDEPS += $$PWD/include/libvisa32.a
